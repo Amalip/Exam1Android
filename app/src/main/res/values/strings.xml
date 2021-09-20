@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Exam1</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="text_login">Login</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_content">Content</string>
+
+    <string name="userNotFound">Not found</string>
+    <string name="text_logout">Logout</string>
+    <string name="text_create">Create</string>
+    <string name="text_read">Read</string>
+    <string name="text_update">Update</string>
+    <string name="text_delete">Delete</string>
+
+    <string name="text_articles">You have written %d articles</string>
+    <string name="text_likes">You have liked %d articles</string>
+
+    <string name="text_complete_form">Fill the form up</string>
+
+</resources>

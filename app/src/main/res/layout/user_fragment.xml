@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment">
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@id/clCarousel"
+        app:layout_constraintEnd_toStartOf="@id/txvUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txvUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgUser"
+        app:layout_constraintTop_toTopOf="@id/imgUser"
+        tools:text="Amalip" />
+
+    <TextView
+        android:id="@+id/txvUserType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/txvExtraInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgUser"
+        app:layout_constraintTop_toBottomOf="@id/txvUsername"
+        tools:text="Writer" />
+
+    <TextView
+        android:id="@+id/txvExtraInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/imgUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgUser"
+        tools:text="10 Articles" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCarousel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/clCRUD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser">
+
+        <ImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/imgCenter"
+            app:layout_constraintEnd_toStartOf="@id/imgCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgCenter" />
+
+        <ImageView
+            android:id="@+id/imgCenter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_404"
+            app:layout_constraintBottom_toTopOf="@id/txvTitle"
+            app:layout_constraintEnd_toStartOf="@id/imgRight"
+            app:layout_constraintStart_toEndOf="@id/imgLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgRight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_right_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/imgCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCenter"
+            app:layout_constraintTop_toTopOf="@id/imgCenter" />
+
+        <TextView
+            android:id="@+id/txvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@id/imgLike"
+            app:layout_constraintEnd_toEndOf="@id/imgCenter"
+            app:layout_constraintStart_toStartOf="@id/imgCenter"
+            app:layout_constraintTop_toBottomOf="@id/imgCenter" />
+
+        <ImageView
+            android:id="@+id/imgLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_not_liked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imgCenter"
+            app:layout_constraintStart_toStartOf="@id/imgCenter"
+            app:layout_constraintTop_toBottomOf="@id/txvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCRUD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clCarousel">
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_create"
+            app:layout_constraintBottom_toTopOf="@id/btnRead"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_read"
+            app:layout_constraintBottom_toTopOf="@id/btnUpdate"
+            app:layout_constraintEnd_toEndOf="@id/btnCreate"
+            app:layout_constraintStart_toStartOf="@id/btnCreate"
+            app:layout_constraintTop_toBottomOf="@id/btnCreate" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_update"
+            app:layout_constraintBottom_toTopOf="@id/btnDelete"
+            app:layout_constraintEnd_toEndOf="@id/btnCreate"
+            app:layout_constraintStart_toStartOf="@id/btnCreate"
+            app:layout_constraintTop_toBottomOf="@id/btnRead" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/btnCreate"
+            app:layout_constraintStart_toStartOf="@id/btnCreate"
+            app:layout_constraintTop_toBottomOf="@id/btnUpdate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clCRUD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
